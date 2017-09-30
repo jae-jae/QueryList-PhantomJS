@@ -54,13 +54,17 @@ class PhantomJs implements PluginContract
         return $queryList;
     }
 
-    protected static function getBrowser($phantomJsBin,$commandOpt)
+    protected static function getBrowser($phantomJsBin,$commandOpt = [])
     {
+        $defaultOpt = [
+           '--load-images' => 'false',
+           '--ignore-ssl-errors'  => 'true'
+        ];
+        $commandOpt = array_merge($defaultOpt,$commandOpt);
+        
         if(self::$browser == null){
             self::$browser = Client::getInstance();
             self::$browser->getEngine()->setPath($phantomJsBin);
-            self::$browser->getEngine()->addOption('--load-images=false');
-            self::$browser->getEngine()->addOption('--ignore-ssl-errors=true');
         }
         foreach ($commandOpt as $k => $v) {
             $str = sprintf('%s=%s',$k,$v);
