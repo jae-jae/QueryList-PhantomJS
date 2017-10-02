@@ -4,6 +4,7 @@ QueryList Plugin: Use PhantomJS to crawl Javascript dynamically rendered pages.(
 QueryList插件: 使用PhantomJS采集JavaScript动态渲染的页面。
 
 > PhantomJS: [http://phantomjs.org](http://phantomjs.org/)
+> QueryList:[https://github.com/jae-jae/QueryList](https://github.com/jae-jae/QueryList)
 
 ## Installation for QueryList4
 ```
