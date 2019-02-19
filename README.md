@@ -8,7 +8,7 @@ QueryList插件: 使用PhantomJS采集JavaScript动态渲染的页面。
 
 ## Installation for QueryList4
 ```
-composer require jaeger/querylist-phantomjs
+composer require hi365/querylist-phantomjs
 ```
 
 ## API
